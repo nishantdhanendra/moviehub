@@ -5,6 +5,8 @@ class Viewer < ApplicationRecord
 
   # Validations
 
+  validates :movie_id, :uniqueness => true
+
   # Scopes
 
   def to_s
