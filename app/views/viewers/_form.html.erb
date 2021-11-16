@@ -1,7 +1,6 @@
 <% was_validated = viewer.errors.any? %>
 
 <%= form_with(model: viewer, local: true, novalidate: true, class: "mb-3") do |f| %>
-  <!-- Label and input for movie_id start -->
   <div class="form-group">
     <% movie_class = "form-control" %>
     <% movie_was_invalid = viewer.errors.include?(:movie) %>
@@ -15,9 +14,7 @@
     <% end %>
 
     <%= f.label :movie_id %>
-    <!-- Input for movie_id start -->
     <%= f.text_field :movie_id, class: movie_class, placeholder: "Enter movie" %>
-    <!-- Input for movie_id end -->
     <% if movie_was_invalid %>
       <% viewer.errors.full_messages_for(:movie).each do |message| %>
         <div class="invalid-feedback d-flex">
@@ -26,6 +23,5 @@
       <% end %>
     <% end %>
   </div>
-  <!-- Label and input for movie_id end -->
   <%= f.button class: "btn btn-outline-secondary btn-block" %>
 <% end %>
