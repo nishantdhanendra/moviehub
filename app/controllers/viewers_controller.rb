@@ -3,7 +3,7 @@ class ViewersController < ApplicationController
 
   # GET /viewers
   def index
-    @viewers = Viewer.all
+    @viewers = Viewer.page(params[:page]).per(10)
   end
 
   # GET /viewers/1
