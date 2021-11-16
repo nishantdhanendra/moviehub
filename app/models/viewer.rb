@@ -1,5 +1,7 @@
 class Viewer < ApplicationRecord
-  # Direct associations
+  
+  include JwtToken
+# Direct associations
 
   # Indirect associations
 
