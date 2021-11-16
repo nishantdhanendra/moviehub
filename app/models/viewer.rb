@@ -1,13 +1,12 @@
 class Viewer < ApplicationRecord
-  
   include JwtToken
-# Direct associations
+  # Direct associations
 
   # Indirect associations
 
   # Validations
 
-  validates :movie_id, :uniqueness => true
+  validates :movie_id, uniqueness: true
 
   # Scopes
 

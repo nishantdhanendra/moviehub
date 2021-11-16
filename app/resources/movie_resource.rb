@@ -10,5 +10,4 @@ class MovieResource < ApplicationResource
   # Direct associations
 
   # Indirect associations
-
 end

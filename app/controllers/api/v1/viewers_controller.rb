@@ -13,7 +13,7 @@ class Api::V1::ViewersController < Api::V1::GraphitiController
     viewer = ViewerResource.build(params)
 
     if viewer.save
-      render jsonapi: viewer, status: 201
+      render jsonapi: viewer, status: :created
     else
       render jsonapi_errors: viewer
     end
@@ -33,7 +33,7 @@ class Api::V1::ViewersController < Api::V1::GraphitiController
     viewer = ViewerResource.find(params)
 
     if viewer.destroy
-      render jsonapi: { meta: {} }, status: 200
+      render jsonapi: { meta: {} }, status: :ok
     else
       render jsonapi_errors: viewer
     end

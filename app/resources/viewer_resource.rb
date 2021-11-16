@@ -9,5 +9,4 @@ class ViewerResource < ApplicationResource
   # Direct associations
 
   # Indirect associations
-
 end
